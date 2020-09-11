@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/chatb"
+    tools:context=".chatpage">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/po"
+        android:id="@+id/chatlist"
+        android:layout_above="@id/chatmessage"/>
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:id="@+id/po"
+        android:background="@android:color/transparent"
+        >
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:padding="1dp"
+            android:id="@+id/chatpropic"
+            android:src="@drawable/ic_launcher_foreground"
+            android:background="@android:color/transparent"
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/chatpropic"
+            android:background="#323232"
+            android:textSize="25sp"
+            android:textColor="#fff"
+            android:text="User_Name"
+            android:id="@+id/chatuser"
+            android:textStyle="bold"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            />
+        </RelativeLayout>
+
+
+
+    </com.google.android.material.appbar.AppBarLayout>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:textColor="#fff"
+        android:layout_toLeftOf="@id/chatmessagesend"
+        android:background="@drawable/roundrect3"
+        android:id="@+id/chatmessage"
+        android:padding="10dp"/>
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        app:rippleColor="@color/colorPrimaryDark"
+        android:src="@drawable/ic_baseline_send_24"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:id="@+id/chatmessagesend"
+        />
+
+
+</RelativeLayout>
